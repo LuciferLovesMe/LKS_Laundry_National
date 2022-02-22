@@ -58,6 +58,30 @@
     <Compile Include="MainLogin.Designer.cs">
       <DependentUpon>MainLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="MasterEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterEmployee.Designer.cs">
+      <DependentUpon>MasterEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterPackage.Designer.cs">
+      <DependentUpon>MasterPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterService.Designer.cs">
+      <DependentUpon>MasterService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrepaidPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrepaidPackage.Designer.cs">
+      <DependentUpon>PrepaidPackage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,12 +90,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransDeposit.Designer.cs">
+      <DependentUpon>TransDeposit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils.cs" />
+    <Compile Include="ViewTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTransaction.Designer.cs">
+      <DependentUpon>ViewTransaction.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainLogin.resx">
       <DependentUpon>MainLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEmployee.resx">
+      <DependentUpon>MasterEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPackage.resx">
+      <DependentUpon>MasterPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterService.resx">
+      <DependentUpon>MasterService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrepaidPackage.resx">
+      <DependentUpon>PrepaidPackage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
