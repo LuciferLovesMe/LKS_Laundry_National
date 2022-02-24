@@ -16,7 +16,7 @@ namespace LKS_Laundry_National
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MasterService());
+            Application.Run(new PrepaidPackage());
         }
     }
 }
