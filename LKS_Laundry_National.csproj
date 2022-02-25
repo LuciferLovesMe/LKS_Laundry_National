@@ -109,6 +109,9 @@
     <Compile Include="ViewTransaction.Designer.cs">
       <DependentUpon>ViewTransaction.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransDeposit.resx">
       <DependentUpon>TransDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTransaction.resx">
+      <DependentUpon>ViewTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

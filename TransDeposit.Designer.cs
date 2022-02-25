@@ -70,6 +70,8 @@ namespace LKS_Laundry_National
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel_view.SuspendLayout();
             this.panel_prepaid.SuspendLayout();
@@ -397,12 +399,13 @@ namespace LKS_Laundry_National
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(779, 338);
+            this.button4.Location = new System.Drawing.Point(367, 383);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(181, 40);
             this.button4.TabIndex = 32;
             this.button4.Text = "Submit ";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
             // 
@@ -444,6 +447,7 @@ namespace LKS_Laundry_National
             this.button3.TabIndex = 20;
             this.button3.Text = "Add Customer";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox4
             // 
@@ -492,6 +496,7 @@ namespace LKS_Laundry_National
             this.textBox2.Size = new System.Drawing.Size(375, 26);
             this.textBox2.TabIndex = 15;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label15
             // 
@@ -542,11 +547,31 @@ namespace LKS_Laundry_National
             this.label13.TabIndex = 26;
             this.label13.Text = "Service";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(775, 326);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(90, 19);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "Estimation ";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(779, 348);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(375, 26);
+            this.dateTimePicker1.TabIndex = 38;
+            // 
             // TransDeposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 711);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label18);
@@ -632,5 +657,7 @@ namespace LKS_Laundry_National
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

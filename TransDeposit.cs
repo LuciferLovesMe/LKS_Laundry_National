@@ -16,7 +16,7 @@ namespace LKS_Laundry_National
         SqlConnection connection = new SqlConnection(Utils.conn);
         SqlCommand command;
         SqlDataReader reader;
-        int id, id_package;
+        int id, idHeader;
 
         public TransDeposit()
         {
@@ -62,7 +62,7 @@ namespace LKS_Laundry_National
 
         void loadgrid(string s)
         {
-            string com = "select * from package_view" + s;
+            string com = "select * from depo_view" + s;
             dataGridView1.DataSource = Command.getData(com);
         }
 
@@ -205,20 +205,20 @@ namespace LKS_Laundry_National
         {
             if (val())
             {
-                string com = "insert into prepaidPackage values(" + id + ", " + comboBox1.SelectedValue + ", " + Convert.ToInt32(textBox1.Text) + ", getdate(), null)";
+                string com = "insert into headerDeposit values(" + id + ", " + Model.id + ", getdate(), " + dateTimePicker1.Value.ToString("yyyy-MM-dd") + ")";
                 try
                 {
                     Command.exec(com);
                     connection.Close();
 
-                    command = new SqlCommand("select top(1) * from prepaidPackage order by id desc", connection);
+                    command = new SqlCommand("select top(1) * from headerDeposit order by id desc", connection);
                     connection.Open();
                     reader = command.ExecuteReader();
                     reader.Read();
-                    id_package = reader.GetInt32(0);
+                    idHeader = reader.GetInt32(0);
                     connection.Close();
 
-                    string c = "insert into detailDeposit values(null, " + comboBox1.SelectedValue + ", " + id_package + ", " + Convert.ToInt32(textBox1.Text) + ", " + numericUpDown1.Value + ", null)";
+                    string c = "insert into detailDeposit values(" + idHeader + ", " + Convert.ToInt32(comboBox1.SelectedValue) + ", null, " + Convert.ToInt32(textBox1.Text) + ", " + numericUpDown1.Value + ", null)";
                     try
                     {
                         Command.exec(c);
