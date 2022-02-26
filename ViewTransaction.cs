@@ -155,5 +155,32 @@ namespace LKS_Laundry_National
                 }
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application application = new Microsoft.Office.Interop.Excel.Application();
+            if(dataGridView1.RowCount < 1)
+            {
+                MessageBox.Show("There are no data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                application.Workbooks.Add(Type.Missing);
+                for(int i = 0; i < dataGridView1.ColumnCount; i++)
+                {
+                    application.Cells[i + 1] = dataGridView1.Columns[i].HeaderText;
+                }
+
+                for(int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    for(int j = 0; j < dataGridView1.ColumnCount; j++)
+                    {
+                        application.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+
+                application.Visible = true;
+            }
+        }
     }
 }

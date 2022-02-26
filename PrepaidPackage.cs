@@ -187,7 +187,7 @@ namespace LKS_Laundry_National
         private void button3_Click(object sender, EventArgs e)
         {
             AddCustomer add = new AddCustomer();
-            this.Hide();
+            Where.id = 1;
             add.ShowDialog();
         }
 

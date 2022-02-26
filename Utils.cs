@@ -39,4 +39,9 @@ namespace LKS_Laundry_National
             command.ExecuteNonQuery();
         }
     }
+
+    class Where
+    {
+        public static int id { set; get; }
+    }
 }
